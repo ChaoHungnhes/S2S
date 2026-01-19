@@ -181,3 +181,15 @@ Seller → Lock product
        → Create transaction
        → Log CONFIRM_BUYER
 
+
+User
+ ├── Product
+ ├── Conversation
+ ├── Review
+ ├── UserReport (reported)
+ ├── UserReport (reporter)
+
+AuditLog
+ ├── actorId (User/Admin)
+ └── targetId (Product / Transaction)
+

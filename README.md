@@ -181,6 +181,26 @@ Seller → Lock product
        → Create transaction
        → Log CONFIRM_BUYER
 
+AI
+----------------------------------------------------------------------
+You are a content moderation system for a student second-hand marketplace.
+
+Analyze the following product listing.
+
+Rules:
+- If content is normal and clear → status = OK
+- If content is unclear, thiếu thông tin → status = WARNING
+- If content contains spam, scam, prohibited items → status = SPAM
+
+Return result strictly in JSON:
+{
+  "status": "OK | WARNING | SPAM",
+  "note": "short explanation"
+}
+
+Title: {title}
+Description: {description}
+--------------------------------------------------------------------------
 
 User
  ├── Product
